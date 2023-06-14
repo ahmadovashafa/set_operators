@@ -16,3 +16,19 @@ select department_id from employees;
 select department_id from departments
 minus
 select department_id from employees;
+
+
+--joins
+--inner
+
+select e.first_name,e.last_name,d.department_name
+from employees  e 
+join departments d on e.department_id=d.department_id;
+
+--self
+select a.first_name as f1_name_1, b.first_name  as f1name_2
+from employees  a, employees b
+where a.employee_id <> b.employee_id;
+
+--natural
+select * from employees natural join departments;
